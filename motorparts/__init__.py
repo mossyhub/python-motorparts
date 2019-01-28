@@ -208,7 +208,7 @@ def _remote_status(session, service_id, uuid, url, interval=3):
 
 
 @token
-def remote_command(session, command, vehicle_index, poll=True):
+def remote_command(session, command, vehicle_index, poll=False):
     """Send a remote command."""
     if command not in SUPPORTED_COMMANDS:
         raise MoparError("unsupported command: " + command)
